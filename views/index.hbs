@@ -1,0 +1,62 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<form action="/insertUser" method="post" enctype="multipart/form-data">
+
+    <!--    <input name="">-->
+    <!--    username: 'admin',-->
+    <!--    password: 'password',-->
+    <!--    name: 'Huy Huy Huy',-->
+    <!--    address: 'BN',-->
+    <!--    number_phone: '0913456789'-->
+    <li>
+        <input name="username" placeholder="Enter username">
+    </li>
+    <br>
+    <li>
+        <input name="password" placeholder="Enter password" type="password">
+    </li>
+    <br>
+    <li>
+        <input name="name" placeholder="Enter name">
+    </li>
+    <br>
+    <li>
+        <input name="address" placeholder="Enter address">
+    </li>
+    <br>
+    <li>
+        <input name="number_phone" placeholder="Enter number phone">
+    </li>
+    <br>
+    <li>
+        <input name="avatar" type="file">
+    </li>
+    <li>
+        <button type="submit">Save</button>
+    </li>
+
+
+    <!--    <input name="">-->
+    <!--    username: 'admin',-->
+    <!--    password: 'password',-->
+    <!--    name: 'Huy Huy Huy',-->
+    <!--    address: 'BN',-->
+    <!--    number_phone: '0913456789'-->
+    {{#each users}}
+        <div>{{this._id}}</div>
+        <div>{{this.username}}</div>
+        <div>{{this.password}}</div>
+        <div>{{this.address}}</div>
+        <div>{{this.number_phone}}</div>
+        <div>{{this.avatar}}</div>
+
+
+        <button>Update</button>
+        <button>Delete</button>
+        <br>
+        <div> ---------------------------------------------------</div>
+    {{/each}}
+
+
+</form>
